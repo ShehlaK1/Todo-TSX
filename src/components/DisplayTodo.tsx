@@ -10,11 +10,18 @@ const DisplayTodo = () => {
   function addList(newTodo: string) {
     setTodoList([...todoList, newTodo]);
   }
+
+  //deleting todo using splice
+  // const handleClick = (id: number) => {
+  //   let tempList = [...todoList];
+  //   tempList.splice(id, 1);
+  //   setTodoList(tempList);
+  // };
+
+  //deleting todo using filter
   const handleClick = (id: number) => {
     console.log(id);
-    let tempList = todoList.filter((item, key) =>{
-      console.log(item)
-      key !== id} );
+    let tempList = todoList.filter((_item, key) => key !== id);
     setTodoList(tempList);
   };
 
@@ -50,28 +57,3 @@ const DisplayTodo = () => {
 
 export default DisplayTodo;
 
-{
-  /* <>
-<div className="display-all">
-  <h3 className="todo-heading">Displaying all todos:</h3>
-  <ul>
-    {todoList.map((todo, i) => (
-      <div
-        className={`todo ${done ? "done" : ""}`}
-        key={"todo" + todo + i}
-      >
-        {todo}
-        <button
-          className="okay-icon"
-          onClick={() => {
-            setDone(true);
-          }}
-        >
-          {okayIcon}
-        </button>
-      </div>
-    ))}
-  </ul>
-</div>
-</> */
-}
