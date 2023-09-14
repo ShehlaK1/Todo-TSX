@@ -12,7 +12,9 @@ const DisplayTodo = () => {
   }
   const handleClick = (id: number) => {
     console.log(id);
-    let tempList = todoList.filter((item, key) => key !== id);
+    let tempList = todoList.filter((item, key) =>{
+      console.log(item)
+      key !== id} );
     setTodoList(tempList);
   };
 
