@@ -1,0 +1,11 @@
+#root {
+    background-color: #b68af3a8;
+    height: 100vh;
+}
+
+.todo-app {
+    color: white;
+    font-family: verdana;
+  font-size: 300%;
+  text-align: center;
+}
